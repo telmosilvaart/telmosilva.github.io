@@ -10,16 +10,60 @@ body{
 
 header{
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     animation: intro2 1s ease-in-out;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-header img{
+header figure{
+    margin: auto;
     width: 100%;
     height: 100%;
     animation: intro1 0.75s ease-out;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+header img{
+    height: 100%;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    border-bottom: 1px solid dodgerblue;
+    margin-top: 50px;
+}
+h3{
+    margin-bottom: 0;
+}
+.social-media-title{
+    margin-bottom: 10px;
+}
+.social-media a{
+    height: 75px;
+    margin: 10px;
+}
+.social-media figure{
+    height: 100%;
+    margin: 0;
+}
+.social-media img{
+    height: 100%;
+    margin: 0;
+}
+
+
+.prioWidth{
+    width: 90%;
+    height: auto!important;
 }
 
 /* main section{
@@ -28,35 +72,47 @@ header img{
     justify-content: center;
     flex-direction: row;
 } */
-
-#thumbnails-view{
+main{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: dodgerblue;
     animation: intro3 1s ease-out;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
     opacity: 0;
+    margin-bottom: 50px;
     text-align: center;
+}
+#thumbnails-view-container{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnails-view{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
-    margin-bottom: 50px;
 }
 
-#thumbnails-view figure{
+.thumbnails-view figure{
     border-radius: 5px;
     width: 150px;
     height: 150px;
     margin: 5px;
     background-color: white;
 }
-#thumbnails-view figure div{
+.thumbnails-view figure div{
     border-radius: 5px;
     overflow: hidden;
     height: 100%;
     width: 100%;
 }
 
-#thumbnails-view figure img{
+.thumbnails-view figure img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -65,24 +121,25 @@ header img{
 }
 
 @media only screen and (orientation: landscape) {
-    #thumbnails-view img:hover{
+    .thumbnails-view img:hover{
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: .2s ease-in;
         cursor: pointer;
     }
-    #thumbnails-view img:not(:hover){
+    .thumbnails-view img:not(:hover){
         filter: opacity(70%);
     }
     #gallery-view img{
-        height: 80vh;
+        height: 80%;
+        max-width: 80%;
     }
 }
 
 @media only screen and (orientation: portrait) {
     #gallery-view img{
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -107,18 +164,19 @@ header img{
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
+    background-color: rgba(0,0,0,0.75);
 }
 #gallery-view figure{
+    display: none;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 #gallery-view img{
-    padding: 5%;
+    align-self: center;
     /* height: 80vh; */
     background-color: rgba(0,0,0,0.7);
-    border-radius: 20%;
 }
 
 
@@ -228,14 +286,14 @@ footer p{
 }
 
 .appear{
-    display: flex;
+    display: flex!important;
     -webkit-animation: appear 0.2s ease-in;
     -moz-animation: appear 0.2s ease-in;
     animation: appear 0.2s ease-in;
     animation-fill-mode: forwards;
 }
 .disappear{
-    display: none;
+    display: none!important;
     -webkit-animation: disappear 0.2s ease-out;
     -moz-animation: disappear 0.2s ease-out;
     animation: disappear 0.2s ease-out;
