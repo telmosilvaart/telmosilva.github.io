@@ -42,7 +42,6 @@ header img{
     margin-bottom: 50px;
 }
 
-
 #thumbnails-view figure{
     border-radius: 5px;
     width: 150px;
@@ -64,7 +63,8 @@ header img{
     object-position: 50% 50%;
     transition: 0.2s ease-out;
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (orientation: landscape) {
     #thumbnails-view img:hover{
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -76,7 +76,13 @@ header img{
         filter: opacity(70%);
     }
     #gallery-view img{
-        height: 80%;
+        height: 80vh;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #gallery-view img{
+        width: 100%;
     }
 }
 
@@ -97,7 +103,6 @@ header img{
     padding: 0;
     width: 90vw;
     height: 90vh;
-    background-color: rgba(0,0,0, 0.9);
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -105,25 +110,22 @@ header img{
     border-radius: 5%;
 }
 #gallery-view figure{
-    height: 90%;
-    width: 90%;
-    margin: auto;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
-#gallery-view figure img{
-    border-radius: 5%;
+#gallery-view img{
+    padding: 5%;
+    /* height: 80vh; */
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 20%;
 }
 
-@media only screen and (max-width: 767px) {
-    #gallery-view img{
-        width: 90%;
-    }
-}
+
 
 footer{
     font-family: 'Dancing Script', cursive;
-    font-size: 30px;
+    font-size: 20px;
     font-stretch: extra-expanded;
     background-color: white;
     color: #00bac0ff;
@@ -158,7 +160,7 @@ footer p{
 }
 
 @keyframes appear {
-    from { transform: scale(0); }
+    from { transform: scale(0);}
     to { transform: scale(1);}
 }
 
@@ -169,11 +171,13 @@ footer p{
 
 .appear{
     display: flex;
+    webkit-animation: appear 0.2s ease-in;
     animation: appear 0.2s ease-in;
     animation-fill-mode: forwards;
 }
 .disappear{
     display: none;
+    webkit-animation: disappear 0.2s ease-out;
     animation: disappear 0.2s ease-out;
     animation-fill-mode: forwards;
 }
