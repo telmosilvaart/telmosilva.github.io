@@ -171,13 +171,15 @@ footer p{
 
 .appear{
     display: flex;
-    webkit-animation: appear 0.2s ease-in;
+    -webkit-animation: appear 0.2s ease-in;
+    -moz-animation: appear 0.2s ease-in;
     animation: appear 0.2s ease-in;
     animation-fill-mode: forwards;
 }
 .disappear{
     display: none;
-    webkit-animation: disappear 0.2s ease-out;
+    -webkit-animation: disappear 0.2s ease-out;
+    -moz-animation: disappear 0.2s ease-out;
     animation: disappear 0.2s ease-out;
     animation-fill-mode: forwards;
 }
