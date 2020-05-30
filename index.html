@@ -17,71 +17,60 @@
             window.onbeforeunload = function () {window.scrollTo(0, 0);};
         </script>
 
-        <script src="js/jquery-3.5.1.min.js"></script>
+
     </head>
 
     <body>
 
+        <div class="load"><p>LOADING</p></div>
+
 
         <header>
-            <figure class="telmosilva">
-                <img src="img/avatar/svg/avatar-full.svg" />
+            <figure>
+                <img src="img/avatar/svg/avatar-name.svg" />
             </figure>
-
-
         </header>
+
 
         <main>
             <div id="gallery-view-container">
                 <section id="gallery-view" >
-
                     <small style="color: white; background-color: rgba(0,0,0,0.4); padding: 3px; border-radius: 5%;">click to remove</small>
 
                     <!-- Drawings Illustrations Paintings -->
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/char-diego-amazonasAnimation.webp" alt="Drawing" class="prioWidth" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/drawing-1.webp" alt="Drawing" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/drawing-2.webp" alt="Drawing" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/illustration-1.webp" alt="Illustration" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/illustration-2.webp" alt="Illustration" class="prioWidth"/>
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/illustration-3.webp" alt="Illustration" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/illustration-4.webp" alt="Illustration" class="prioHeight"/>
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/painting-1.webp" alt="Painting" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/painting-2.webp" alt="Painting" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/painting-3.webp" alt="Painting" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/painting-4.webp" alt="Painting" />
                     </figure>
-
                     <figure class="gallery-item">
                         <img src="img/portefolio/drawing-illustrations-paintings/painting-5.webp" alt="Painting" class="prioWidth"/>
                     </figure>
@@ -670,21 +659,7 @@ THUMBNAILS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             <p>telmo.silva.art @ gmail.com</p>
         </footer>
 
-        <script>
-            var index = 0;
-            $(".thumbnail-item").click(function(){
-                index = $(this).index(".thumbnail-item");
-                console.log(index);
-                $("#gallery-view-container").addClass("appear").removeClass("disappear").css("display", "flex");
-                $(".gallery-item:eq("+index+")").addClass("appear").removeClass("disappear");
-            });
-
-            $("#gallery-view-container").click(function(){
-                $("#gallery-view-container").addClass("disappear").delay(4000).css("display", "none").removeClass("appear");
-                $(".gallery-item:eq("+index+")").addClass("disappear").delay(4000).removeClass("appear");
-            });
-        </script>
-
-
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
