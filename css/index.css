@@ -286,7 +286,7 @@ main{
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.75);
+
 }
 #gallery-view figure{
     display: none;
@@ -298,7 +298,7 @@ main{
 #gallery-view img{
     align-self: center;
     /* height: 80vh; */
-    background-color: rgba(0,0,0,0.7);
+    box-shadow:0 0 5vw black;
 }
 
 
